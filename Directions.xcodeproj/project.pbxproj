@@ -27,6 +27,8 @@
 		C98290551D6B552C0032D617 /* ProductInstructionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98290541D6B552C0032D617 /* ProductInstructionViewController.swift */; };
 		C98290571D6B5A370032D617 /* ProductInstructionViewStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98290561D6B5A370032D617 /* ProductInstructionViewStrategy.swift */; };
 		C98290591D6B720D0032D617 /* Speech.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98290581D6B720D0032D617 /* Speech.swift */; };
+		C99386D41E57B20600AABDA4 /* barcode.php in Resources */ = {isa = PBXBuildFile; fileRef = C99386D21E57B20600AABDA4 /* barcode.php */; };
+		C99386D51E57B20600AABDA4 /* barcode.wsdl in Resources */ = {isa = PBXBuildFile; fileRef = C99386D31E57B20600AABDA4 /* barcode.wsdl */; };
 		C9AFF9801D67723A00634826 /* Dialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9AFF97F1D67723A00634826 /* Dialog.swift */; };
 		C9AFF9821D677D2E00634826 /* InstructionViewStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9AFF9811D677D2E00634826 /* InstructionViewStrategy.swift */; };
 		C9AFF9841D67B50400634826 /* UIViewControllerPortrait.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9AFF9831D67B50400634826 /* UIViewControllerPortrait.swift */; };
@@ -100,6 +102,8 @@
 		C98290541D6B552C0032D617 /* ProductInstructionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductInstructionViewController.swift; sourceTree = "<group>"; };
 		C98290561D6B5A370032D617 /* ProductInstructionViewStrategy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductInstructionViewStrategy.swift; sourceTree = "<group>"; };
 		C98290581D6B720D0032D617 /* Speech.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Speech.swift; sourceTree = "<group>"; };
+		C99386D21E57B20600AABDA4 /* barcode.php */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.php; path = barcode.php; sourceTree = "<group>"; };
+		C99386D31E57B20600AABDA4 /* barcode.wsdl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = barcode.wsdl; sourceTree = "<group>"; };
 		C9AFF97F1D67723A00634826 /* Dialog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dialog.swift; sourceTree = "<group>"; };
 		C9AFF9811D677D2E00634826 /* InstructionViewStrategy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InstructionViewStrategy.swift; sourceTree = "<group>"; };
 		C9AFF9831D67B50400634826 /* UIViewControllerPortrait.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerPortrait.swift; sourceTree = "<group>"; };
@@ -177,6 +181,7 @@
 		C903CBD41D63B7F300A40DC0 /* Directions */ = {
 			isa = PBXGroup;
 			children = (
+				C99386D11E57B20600AABDA4 /* barcode_webservice */,
 				C9EF72701D66604D00BFB256 /* strategies */,
 				C9E92B231D64B578006391D8 /* iterators */,
 				C903CC171D63BAA400A40DC0 /* dtos */,
@@ -289,6 +294,15 @@
 				C9FD68D41E2048EA0066FED8 /* Transfer.swift */,
 			);
 			name = dtos;
+			sourceTree = "<group>";
+		};
+		C99386D11E57B20600AABDA4 /* barcode_webservice */ = {
+			isa = PBXGroup;
+			children = (
+				C99386D21E57B20600AABDA4 /* barcode.php */,
+				C99386D31E57B20600AABDA4 /* barcode.wsdl */,
+			);
+			path = barcode_webservice;
 			sourceTree = "<group>";
 		};
 		C9E92B231D64B578006391D8 /* iterators */ = {
@@ -425,6 +439,8 @@
 				C903CBE01D63B7F300A40DC0 /* LaunchScreen.storyboard in Resources */,
 				C903CC161D63BA8D00A40DC0 /* scanner.mp3 in Resources */,
 				C903CC151D63BA8D00A40DC0 /* error.mp3 in Resources */,
+				C99386D41E57B20600AABDA4 /* barcode.php in Resources */,
+				C99386D51E57B20600AABDA4 /* barcode.wsdl in Resources */,
 				C903CBDD1D63B7F300A40DC0 /* Assets.xcassets in Resources */,
 				C903CC141D63BA8D00A40DC0 /* success.mp3 in Resources */,
 				C903CBDB1D63B7F300A40DC0 /* Main.storyboard in Resources */,

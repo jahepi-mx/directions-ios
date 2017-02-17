@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<definitions name="Pennsylvania" targetNamespace="urn:Pennsylvania" xmlns:tns="urn:Pennsylvania" 
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+	xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" 
+	xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" 
+	xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" 
+	xmlns="http://schemas.xmlsoap.org/wsdl/">
+
+
+<message name='getProcessCodeRequest'> 
+  <part name='code' type='xsd:string'/>
+</message> 
+<message name='getProcessCodeResponse'> 
+  <part name='return' type='xsd:string'/> 
+</message> 
+
+<message name='getConfirmCodeRequest'> 
+  <part name='code' type='xsd:string'/>
+</message> 
+<message name='getConfirmCodeResponse'> 
+  <part name='return' type='xsd:string'/> 
+</message>
+
+<message name='loginRequest'> 
+  <part name='email' type='xsd:string'/>
+  <part name='password' type='xsd:string'/>
+</message> 
+<message name='loginResponse'> 
+  <part name='return' type='xsd:string'/> 
+</message>
+
+<message name='getProductsRequest'> 
+  <part name='code' type='xsd:string'/>
+</message> 
+<message name='getProductsResponse'> 
+  <part name='return' type='xsd:string'/> 
+</message> 
+
+<message name='getCommitRecolectRequest'> 
+  <part name='product' type='xsd:string'/>
+  <part name='lot' type='xsd:string'/>
+  <part name='qty' type='xsd:string'/>
+  <part name='ubication' type='xsd:string'/>
+  <part name='code' type='xsd:string'/>
+</message> 
+<message name='getCommitRecolectResponse'> 
+  <part name='return' type='xsd:string'/> 
+</message>
+
+<message name='getCommitTransfer1Request'> 
+  <part name='product' type='xsd:string'/>
+  <part name='lot' type='xsd:string'/>
+  <part name='qty' type='xsd:string'/>
+  <part name='ubication' type='xsd:string'/>
+  <part name='code' type='xsd:string'/>
+</message> 
+<message name='getCommitTransfer1Response'> 
+  <part name='return' type='xsd:string'/> 
+</message>
+
+<message name='getCommitTransfer2Request'> 
+  <part name='product' type='xsd:string'/>
+  <part name='lot' type='xsd:string'/>
+  <part name='qty' type='xsd:string'/>
+  <part name='ubication' type='xsd:string'/>
+  <part name='code' type='xsd:string'/>
+</message> 
+<message name='getCommitTransfer2Response'> 
+  <part name='return' type='xsd:string'/> 
+</message>
+
+<portType name='PennsylvaniaPortType'> 
+  <operation name='confirmCode'> 
+    <input message='tns:getConfirmCodeRequest'/> 
+    <output message='tns:getConfirmCodeResponse'/> 
+  </operation>
+  <operation name='login'> 
+    <input message='tns:loginRequest'/> 
+    <output message='tns:loginResponse'/> 
+  </operation>
+  <operation name='processCode'> 
+    <input message='tns:getProcessCodeRequest'/> 
+    <output message='tns:getProcessCodeResponse'/> 
+  </operation>
+  <operation name='getProducts'> 
+    <input message='tns:getProductsRequest'/> 
+    <output message='tns:getProductsResponse'/> 
+  </operation>
+  <operation name='commitRecolect'> 
+    <input message='tns:getCommitRecolectRequest'/> 
+    <output message='tns:getCommitRecolectResponse'/> 
+  </operation>
+  <operation name='commitTransfer1'> 
+    <input message='tns:getCommitTransfer1Request'/> 
+    <output message='tns:getCommitTransfer1Response'/> 
+  </operation>
+  <operation name='commitTransfer2'> 
+    <input message='tns:getCommitTransfer2Request'/> 
+    <output message='tns:getCommitTransfer2Response'/> 
+  </operation>
+</portType>
+
+<binding name='PennsylvaniaBinding' type='tns:PennsylvaniaPortType'> 
+  <soap:binding style='rpc' transport='http://schemas.xmlsoap.org/soap/http'/>
+  <operation name='login'> 
+    <soap:operation soapAction="urn:Pennsylvania#login" style="rpc" />
+    	<input><soap:body  namespace="urn:Pennsylvania" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" /></input>
+    	<output><soap:body namespace="urn:Pennsylvania" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" /></output>
+  </operation>
+  <operation name='processCode'> 
+    <soap:operation soapAction="urn:Pennsylvania#processCode" style="rpc" />
+    	<input><soap:body  namespace="urn:Pennsylvania" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" /></input>
+    	<output><soap:body namespace="urn:Pennsylvania" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" /></output>
+  </operation>
+  <operation name='confirmCode'> 
+    <soap:operation soapAction="urn:Pennsylvania#confirmCode" style="rpc" />
+    	<input><soap:body  namespace="urn:Pennsylvania" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" /></input>
+    	<output><soap:body namespace="urn:Pennsylvania" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" /></output>
+  </operation>
+  <operation name='getProducts'> 
+    <soap:operation soapAction="urn:Pennsylvania#getProducts" style="rpc" />
+    	<input><soap:body  namespace="urn:Pennsylvania" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" /></input>
+    	<output><soap:body namespace="urn:Pennsylvania" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" /></output>
+  </operation>
+  <operation name='commitRecolect'> 
+    <soap:operation soapAction="urn:Pennsylvania#commitRecolect" style="rpc" />
+    	<input><soap:body  namespace="urn:Pennsylvania" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" /></input>
+    	<output><soap:body namespace="urn:Pennsylvania" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" /></output>
+  </operation>
+  <operation name='commitTransfer1'> 
+    <soap:operation soapAction="urn:Pennsylvania#commitTransfer1" style="rpc" />
+    	<input><soap:body  namespace="urn:Pennsylvania" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" /></input>
+    	<output><soap:body namespace="urn:Pennsylvania" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" /></output>
+  </operation>
+  <operation name='commitTransfer2'> 
+    <soap:operation soapAction="urn:Pennsylvania#commitTransfer2" style="rpc" />
+    	<input><soap:body  namespace="urn:Pennsylvania" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" /></input>
+    	<output><soap:body namespace="urn:Pennsylvania" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" /></output>
+  </operation>
+</binding> 
+
+<service name="Pennsylvania">
+  	<port name="PennsylvaniaPort" binding="tns:PennsylvaniaBinding">
+    	<soap:address location="http://192.168.0.27:3306/barcode_webservice/barcode.php"/>
+  	</port>
+</service>
+
+</definitions>
